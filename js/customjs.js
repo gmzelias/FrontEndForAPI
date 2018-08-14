@@ -28,7 +28,7 @@ $(function() {
 		//validate
 			$.ajax({
 				type: 'post',
-				url: 'http://localhost:8089/users',
+				url: 'https://tranquil-cliffs-25534.herokuapp.com/users',
 				data: JSON.stringify({name:name,username:username,email:email,password:password}),
 				contentType: "application/json; charset=utf-8",
 				//dataType: "json",
@@ -54,7 +54,7 @@ $(function() {
 		var password =$('#password_login').val();
 		$.ajax({
 			type: 'post',
-			url: 'http://localhost:8089/login',
+			url: 'https://tranquil-cliffs-25534.herokuapp.com/login',
 			data: JSON.stringify({email:email,password:password}),
 			contentType: "application/json; charset=utf-8",
 			//dataType: "json",
@@ -71,7 +71,7 @@ $(function() {
 
 			   		$.ajax({
 					type: 'get',
-					url: 'http://localhost:8089/users',
+					url: 'https://tranquil-cliffs-25534.herokuapp.com/users',
 					headers: {
 						
 						api_token:token
@@ -96,7 +96,7 @@ $(function() {
 							var email = $(this).attr('id').split('-')[1];
 							$.ajax({
 								type: 'POST',
-								url: 'http://localhost:8089/select',
+								url: 'https://tranquil-cliffs-25534.herokuapp.com/select',
 								headers: {
 									api_token:token
 								},
@@ -133,7 +133,7 @@ $(function() {
 								   $('#update-submit').click(function() {
 									$.ajax({
 										type: 'PUT',
-										url: 'http://localhost:8089/alter',
+										url: 'https://tranquil-cliffs-25534.herokuapp.com/alter',
 										headers: {
 											api_token:token
 										},
@@ -169,7 +169,7 @@ $(function() {
 							var id = $(this).attr('id').split('-')[1];
 							$.ajax({
 								type: 'DELETE',
-								url: 'http://localhost:8089/delete',
+								url: 'https://tranquil-cliffs-25534.herokuapp.com/delete',
 								headers: {
 									api_token:token
 								},
